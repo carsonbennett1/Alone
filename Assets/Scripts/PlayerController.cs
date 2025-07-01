@@ -2,19 +2,18 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] float speed = 2f;
+    [SerializeField] float speed = 5f;
     [SerializeField] private Rigidbody2D rb;
-    private float horizontal;
-    private float vertical;
+    private Vector2 movement;
 
     void Update()
     {
-        horizontal = Input.GetAxis("Horizontal");
-        vertical = Input.GetAxis("Vertical");
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
     }
 
     private void FixedUpdate()
     {
-        rb.linearVelocity = new Vector2(horizontal * speed, vertical * speed);
+        rb.MovePosition(rb.position +  movement * speed * Time.fixedDeltaTime);
     }
 }
