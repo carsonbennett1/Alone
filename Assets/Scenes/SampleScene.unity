@@ -150,6 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   rb: {fileID: 1556473937}
+  spriteRenderer: {fileID: 552784104}
 --- !u!4 &183675843
 Transform:
   m_ObjectHideFlags: 0
@@ -677,7 +678,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 0
 --- !u!61 &1556473938
 BoxCollider2D:
   m_ObjectHideFlags: 0
